@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #cad0d6;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+
+
+.hero {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+
+.main {
+    background: #2563eb;
+    padding: 25px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.main h2 {
+    color: white;
+    font-size: 28px;
+    
+    font-weight: 700;
+}
+
+.bottem {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+.filter-category,
+.total {
+    flex: 1;
+}
+
+/* =========================
+   Input Section
+========================= */
+
+.inputs {
+    background: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.inputs input,
+.inputs select {
+    height: 45px;
+    padding: 0 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 80px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    color: #374151;
+}
+
+#expense-name {
+    flex: 1;
+    min-width: 180px;
+}
+
+#amount {
+    width: 130px;
+}
+
+#category {
+    width: 160px;
+}
+
+#date {
+    width: 165px;
+}
+
+
+/* =========================
+   Input Focus
+========================= */
+
+.inputs input:focus,
+.inputs select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   Add Expense Button
+========================= */
+
+.button1 {
+    margin-left: auto;
+}
+
+.button1 button {
+    height: 45px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button1 button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(32, 30, 30, 0.08);
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th {
+    padding: 17px 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #475569;
+    font-weight: 700;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 16px 15px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   Action Buttons
+========================= */
+
+td button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+td button:first-child {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+td button:last-child {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+td button:hover {
+    opacity: 0.8;
+}
+
+.filter {
+    margin-top: 25px;
+    padding: 20px 25px;
+    background: rgb(231, 227, 227);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.filter p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+}
+
+#filter-category {
+    padding: 9px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+#filter-category:focus {
+    border-color: #2563eb;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    td button:first-child {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+td button:last-child {
+    background: #fee2e2;
+    color: #dc2626;
+}
+/* =========================
+   Total Expenses
+========================= */
+
+.total {
+    margin-top: 25px;
+    padding: 20px 25px;
+    background: rgb(20, 18, 18);
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #475569;
+}
+
+#total-expense {
+    display: inline-block;
+    margin-left: 8px;
+    color: #2563eb;
+    font-size: 26px;
+    margin-top: 25px;
+    font-weight: 800;
+}
+    #expense-name,
+    #amount,
+    #category,
+    #date {
+        width: 100%;
+    }
+
+    .button1 {
+        margin-left: 0;
+    }
+
+    .button1 button {
+        width: 100%;
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+#categoryy{
+    padding: 12px;
+    border-radius: 8px;
+}
+.bottem {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+.filter-category,
+.total {
+    flex: 1;
+}
+
+/* Filter */
+
+.filter-category {
+    padding: 20px 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.filter-category p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+}
+
+#categoryy {
+    padding: 10px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+/* Total */
+
+.total {
+    padding: 20px 25px;
+    background: rgb(223, 160, 160);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-weight: bolder;
+    color: #15181b;
+}
+
+#total-expense {
+    display: inline-block;
+    margin-left: 8px;
+    color: #2563eb;
+    font-size: 26px;
+    font-weight: 800;
+}

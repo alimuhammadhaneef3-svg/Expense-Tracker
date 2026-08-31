@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero">
+ <div class="main">
+ <h2>Expense Tracker APP</h2>
+    </div>
+    
+    <div class="inputs">
+<input type="text" id="expense-name" placeholder="
+Expense Name">
+<input type="text" id="amount" placeholder="Amount">
+<label for="category"></label>
+
+<select id="category">
+<option value="Food">Food</option>
+<option value="Transport">Transport</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Gym">Gym</option>
+<option value="Other">Other</option>
+<option value="Shopping">Shopping</option>
+<option value="Bills">Bills</option>
+</select>
+
+<input type="date" id="date">
+<div class="button1">
+<button id="add-expense">Add Expense</button>
+</div>
+
+    </div>
+
+    <!-- tr td etc -->
+    <table>
+    <thead>
+        <tr>
+            <th>Expense Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    
+
+    <tbody id="expense-list">
+        <!-- JavaScript will add rows here -->
+    </tbody>
+</table>
+<div class="bottem">
+
+
+     <div class="filter-category">
+        <p>Filter by Category</p>
+        <select id="categoryy">
+<option value="Food">Food</option>
+<option value="Transport">Transport</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Gym">Gym</option>
+<option value="Other">Other</option>
+<option value="Shopping">Shopping</option>
+<option value="Bills">Bills</option>
+</select>
+
+     </div>
+     <div class="total">
+    <h3>Total Expenses: Rs. <span id="total-expense">0</span></h3>
+</div>
+      </div>
+   
+ </div>
+    <script src="script.js"></script>
+</body>
+</html>
